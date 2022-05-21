@@ -11,9 +11,14 @@ public class SampleService {
 
 	@Autowired
 	private SampleMapper mapper;
-	
-	public List<Map> getEducationList(){
-		
+
+	public List<Map> getEducationList() {
+
 		return mapper.getEducationList();
+	}
+
+	public List<Map> findAll() {
+
+		return mapper.findAll();
 	}
 }

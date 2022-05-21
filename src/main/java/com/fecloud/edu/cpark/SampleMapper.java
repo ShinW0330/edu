@@ -13,4 +13,6 @@ public interface SampleMapper {
 	
 	@Select("select * from education")
 	public List<Map> getEducationList();
+	
+	public List<Map> findAll();
 }
