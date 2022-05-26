@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>게시판</title>
+    <link rel="stylesheet" href="../css/boardStyle.css">
+</head>
+
+<header>
+    <div class="board_title">
+        <strong>게시판 목록</strong>
+        <P>ssssss</P>
+    </div>
+</header>
+<nav class="btn_nav">
+    <button>조회</button>
+    <button>등록</button>
+</nav>
+<body>
+    <div class="board_list_wrap">
+         <div class="board_list">
+            <div class="board_list_head">
+                <div class="num">번호</div>
+                <div class="title">제목</div>
+                <div class="date">등록일자</div>
+                <div class="writer">등록자</div>
+                <div class="cnt">조회</div>
+            </div> <!-- board_list_head-->
+            <div class="board_list_body">
+                <div class="item">
+                    <div class="num">5</div>
+                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
+                    <div class="date">2022-5-26</div>
+                    <div class="writer">신욱</div>
+                    <div class="cnt">1</div>
+                </div>
+                <div class="item">
+                    <div class="num">4</div>
+                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
+                    <div class="date">2022-5-26</div>
+                    <div class="writer">신욱</div>
+                    <div class="cnt">1</div>
+                </div>
+                <div class="item">
+                    <div class="num">3</div>
+                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
+                    <div class="date">2022-5-26</div>
+                    <div class="writer">신욱</div>
+                    <div class="cnt">1</div>
+                </div>
+                <div class="item">
+                    <div class="num">2</div>
+                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
+                    <div class="date">2022-5-26</div>
+                    <div class="writer">신욱</div>
+                    <div class="cnt">1</div>
+                </div>
+                <div class="item">
+                    <div class="num">1</div>
+                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
+                    <div class="date">2022-5-26</div>
+                    <div class="writer">신욱</div>
+                    <div class="cnt">1</div>
+                </div>
+            </div> <!-- End board_body-->
+        </div> <!-- End board_list-->
+        <div class="paging">
+            <a href="#" class="bt first">처음 페이지</a>
+            <a href="#" class="bt prev">이전 페이지</a>
+            <a href="#" class="num">1</a>
+            <a href="#" class="num">2</a>
+            <a href="#" class="num">3</a>
+            <a href="#" class="bt next">다음 페이지</a>
+            <a href="#" class="bt last">마지막 페이지</a>
+        </div> <!--end paging -->
+    </div> <!-- End board_list_wrap-->
+
+    <script src="../module/boardList.js"></script>
+</body>
+</html>

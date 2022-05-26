@@ -3,4 +3,37 @@
 
 <mapper namespace="com.fecloud.edu.cpark.SampleMapper">
 	<select id="findAll" resultType="map"> SELECT * FROM EDUCATION </select>
+	
+	<!-- insert query -->
+	<insert id="putSample" parameterType="map">
+		<selectKey keyProperty="seq" resultType="String" order="BEFORE">
+			 select nextval(edu_seq) AS seq
+		</selectKey>
+		INSERT INTO education (
+			  seq
+			, title
+			, content
+			, readcnt
+			, commentcnt
+			, recommendcnt
+			, groupnum
+			, levelnum
+			, stepnum
+			, inip
+			, indate
+		) VALUES (
+			  #{seq}
+			, #{title}
+			, #{content}
+			, 0
+			, 0
+			, 0
+			, 0
+			, 0
+			, 0
+			, 0
+			, null
+		)
+	
+	</insert>
 </mapper>

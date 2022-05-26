@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class SampleController {
 	
-	@Autowired
+	@Autowired //의존성 주입
 	private SampleService service;
 	
 
 	@GetMapping("/sample")
-	public ResponseEntity<?> getSample(@RequestParam Map<String, Object> param ){
+	public Object getSample(@RequestParam Map<String, Object> param ){
 		
-		return ResponseEntity.ok(service.getEducationList());
+		return service.findAll();
 	}
 	
 	@GetMapping("/findAll")
@@ -30,4 +33,11 @@ public class SampleController {
 		
 		return ResponseEntity.ok(service.getEducationList());
 	}
+	
+	@PutMapping("/sample")
+	public ResponseEntity<?> putSample(@RequestBody Map<String, Object> param) {
+		
+		return ResponseEntity.ok(service.putSample(param));
+	}
 }
+

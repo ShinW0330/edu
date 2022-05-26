@@ -8,7 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service // bean 
 public class SampleService {
 
 	@Autowired
@@ -16,11 +16,18 @@ public class SampleService {
 
 	public List<Map> getEducationList() {
 
-		return mapper.getEducationList();
+		return mapper.findAll();
 	}
 
 	public List<Map> findAll() {
 
 		return mapper.findAll();
 	}
+	
+	// input 
+	public int putSample(Map<String, Object> param) { 
+	
+		return mapper.putSample(param);
+	}
 }
+
