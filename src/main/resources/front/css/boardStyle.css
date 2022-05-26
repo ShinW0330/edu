@@ -9,6 +9,41 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+
+/*header*/
+.board_title{
+    margin-bottom: 20px;
+}
+.board_title {
+    font-size: 2rem;
+    margin: 10px
+}
+/*End header*/
+
+/*nav*/
+.bnt_wrap{
+    float: right;
+}
+.bnt_wrap a{
+    display: inline-block;
+    min-width: 50px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 15px;
+    text-align: center;
+}
+.bnt_wrap a:first-child{
+    margin-right: 0;
+}
+.bnt_wrap a.btn_select{
+    background-color: black;
+    color: #cccccc;
+}
+/*End nav */
+
+
 .board_list_wrap{
     padding: 50px;
 }
