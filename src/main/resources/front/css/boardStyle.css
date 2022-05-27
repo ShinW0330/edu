@@ -22,10 +22,10 @@ a{
 /*End header*/
 
 /*nav*/
-.bnt_wrap{
+.btn_wrap{
     float: right;
 }
-.bnt_wrap a{
+.btn_select, btn_{
     display: inline-block;
     min-width: 50px;
     padding: 5px;
@@ -34,13 +34,15 @@ a{
     font-size: 15px;
     text-align: center;
 }
-.bnt_wrap a:first-child{
+.btn_wrap a:first-child{
     margin-right: 0;
 }
-.bnt_wrap a.btn_select{
+.btn_wrap input.btn_select{
     background-color: black;
     color: #cccccc;
 }
+
+
 /*End nav */
 
 
