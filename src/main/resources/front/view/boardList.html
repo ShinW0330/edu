@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>게시판</title>
     <link rel="stylesheet" href="../css/boardStyle.css">
+    <script src="../module/boardList.js"></script>
 </head>
 
+
+<body onload="onReady()">
 <header>
     <div class="board_title">
         <strong>게시판 목록</strong>
@@ -14,14 +17,24 @@
 </header>
 <nav class="board_nav">
     <div class="btn_wrap">
-        <input type="button" class="btn_select" value="조회">
+		
+		<input type="text" id ="searchWriter" >
+    	<input type="text" id="searchText" >
+        <input type="button" id="searchBnt" class="" value="조회">
         <input type="button" class="btn_signUp" value="등록">
 <!--        <a href="#" class="btn_select">조회</a>-->
 <!--        <a href="#" class="btn_signUp">등록</a>-->
     </div>
+    <div>
+    	<input type="text" id ="searchTitle" >
+    	<textarea id="textArea" name="boardview" rows="4" cols="50">
+		</textarea>
+		<input type="button" id="submitBnt" value="등록">
+    </div>
 
 </nav>
-<body>
+
+
     <div class="board_list_wrap">
          <div class="board_list">
             <div class="board_list_head">
@@ -32,42 +45,8 @@
                 <div class="cnt">조회</div>
             </div> <!-- board_list_head-->
              <!--일단 tag로 값 채워넣기 차후 서버에서 값 가져오기  -->
-            <div class="board_list_body">
-                <div class="item">
-                    <div class="num">5</div>
-                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
-                    <div class="date">2022-5-26</div>
-                    <div class="writer">신욱</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div class="item">
-                    <div class="num">4</div>
-                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
-                    <div class="date">2022-5-26</div>
-                    <div class="writer">신욱</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div class="item">
-                    <div class="num">3</div>
-                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
-                    <div class="date">2022-5-26</div>
-                    <div class="writer">신욱</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div class="item">
-                    <div class="num">2</div>
-                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
-                    <div class="date">2022-5-26</div>
-                    <div class="writer">신욱</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div class="item">
-                    <div class="num">1</div>
-                    <div class="title"> <a href="#">개발자 도구 활용하는 방법</a> </div>
-                    <div class="date">2022-5-26</div>
-                    <div class="writer">신욱</div>
-                    <div class="cnt">1</div>
-                </div>
+            <div class="board_list_body" id="result">
+                
             </div> <!-- End board_body-->
         </div> <!-- End board_list-->
         <div class="paging">
@@ -81,6 +60,6 @@
         </div> <!--end paging -->
     </div> <!-- End board_list_wrap-->
 
-    <script src="../module/boardList.js"></script>
+
 </body>
 </html>

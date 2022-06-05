@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fecloud.edu.cpark.SampleMapper">
-	<select id="findAll" resultType="map"> SELECT * FROM EDUCATION </select>
+<mapper namespace="com.fecloud.edu.shin.BoardMapper">
+
+	<select id="findAll" resultType="map" parameterType="map">  
+	SELECT BNO AS "bno",
+	       TITLE AS "title", 
+	       CONTENT AS "content",
+	       WRITER AS "writer"
+	  FROM BOARD 
+	 WHERE (TITLE LIKE CONCAT('%', #{searchTxt}, '%')
+	    OR CONTENT LIKE CONCAT('%', #{searchTxt}, '%'))
+	    AND WRITER LIKE CONCAT('%', #{searchWrite}, '%')
+	    
+	    
+	</select>
+	
+	<insert id="create" parameterType="map">
+		INSERT INTO BOARD ( TITLE, CONTENT, WRITER, REG_DATE) 
+		VALUES (#{title}, #{content},'강신구', now()) 
+	
+	</insert>
 	
 	
 	<!-- insert query 
