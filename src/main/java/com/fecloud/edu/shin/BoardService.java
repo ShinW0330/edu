@@ -27,6 +27,13 @@ public class BoardService {
 	}
 
 
+	public List<Map> getUpdate(Map<String, Object> param) {
+		return mapper.getUpdate(param);
+	}
+
+
+
+	
 
 
 }

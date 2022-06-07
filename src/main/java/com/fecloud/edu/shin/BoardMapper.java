@@ -14,6 +14,8 @@ public interface BoardMapper {
 
 	public int create(Map<String, Object> param);
 
+	public List<Map> getUpdate(Map<String, Object> param);
+
 	
 	
 }

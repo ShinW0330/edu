@@ -17,10 +17,17 @@
 	
 	<insert id="create" parameterType="map">
 		INSERT INTO BOARD ( TITLE, CONTENT, WRITER, REG_DATE) 
-		VALUES (#{title}, #{content},'강신구', now()) 
+		VALUES (#{title}, #{content},'관리자', now()) 
 	
 	</insert>
 	
+	<update id="update" parameterType="map">
+		UPDATE BOARD 
+		SET TITLE= #{title}, 
+		CONTENT=#{content},
+		REG_DATE = now()
+		WHERE bno =#{bno}
+	</update>
 	
 	<!-- insert query 
 	<insert id="putSample" parameterType="map">
@@ -31,7 +38,7 @@
 			  seq
 			, title
 			, content
-			, readcnt
+			, readcnt`
 			, commentcnt
 			, recommendcnt
 			, groupnum

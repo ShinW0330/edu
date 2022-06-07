@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>list</title>
     <link rel="stylesheet" href="../css/css.css">
+    <script src="../module/list.js"></script>
 </head>
-<body>
+<body onload="onReady()">
     <div class="board_wrap">
         <div class="board_title">
             <strong>게시판</strong>
             <p>게시판 목록입니다. </p>
         </div> <!--End board_title -->
+
+        <div class="bt_wrap">
+            <input type="text" id="searchWriter" >
+            <input type="text" id="searchText" >
+            <button type="button" id="board_listSearchBtn" > 조회 </button>
+            <button type="button" id="board_listEditBtn" onclick="location.href='write.html'"> 등록</button>
+
+            <!--                <a href="write.html" class="on">등록</a>-->
+            <!--                <a href="#" >조회</a>-->
+        </div> <!--End bt_wrap -->
         <div class="board_list_wrap">
             <div class="board_list">
                 <div class="top">
@@ -21,36 +32,8 @@
                     <div class="date">등록일자</div>
                     <div class="cnt">조회</div>
                 </div> <!--End top -->
-                <div>
+                <div class="listItemBody" id ='printOutItem'>
                     <div class="num">5</div>
-                    <div class="title"><a href="#">제목</a></div>
-                    <div class="writer">신</div>
-                    <div class="date">2022-5-27</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div>
-                    <div class="num">4</div>
-                    <div class="title"><a href="#">제목</a></div>
-                    <div class="writer">신</div>
-                    <div class="date">2022-5-27</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div>
-                    <div class="num">3</div>
-                    <div class="title"><a href="#">제목</a></div>
-                    <div class="writer">신</div>
-                    <div class="date">2022-5-27</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div>
-                    <div class="num">2</div>
-                    <div class="title"><a href="#">제목</a></div>
-                    <div class="writer">신</div>
-                    <div class="date">2022-5-27</div>
-                    <div class="cnt">1</div>
-                </div>
-                <div>
-                    <div class="num">1</div>
                     <div class="title"><a href="#">제목</a></div>
                     <div class="writer">신</div>
                     <div class="date">2022-5-27</div>
@@ -67,10 +50,7 @@
                 <a href="#" class="bt next">></a>
                 <a href="#" class="bt last">>></a>
             </div>
-            <div class="bt_wrap">
-                <a href="write.html" class="on">등록</a>
-                <a href="#" >조회</a>
-            </div> <!--End bt_wrap -->
+
         </div> <!--End board_list_wrap -->
     </div> <!--End board_wrap -->
 </body>

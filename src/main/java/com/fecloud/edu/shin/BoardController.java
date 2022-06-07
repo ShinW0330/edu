@@ -32,6 +32,11 @@ public class BoardController {
 		
 		return ResponseEntity.ok(service.create(param));
 	}
-
+	
+	@GetMapping("/getUpdate")
+	public ResponseEntity<?> getUpdate (@RequestParam Map<String, Object> param){
+		return ResponseEntity.ok(service.getUpdate(param));
+		
+	}
 }
 
