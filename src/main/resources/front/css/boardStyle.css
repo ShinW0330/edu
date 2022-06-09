@@ -43,7 +43,7 @@ a{
 }
 
 
-/*End nav */
+/*End nav */r
 
 
 .board_list_wrap{
@@ -68,7 +68,7 @@ a{
 .board_list_head > div,
 .board_list_body .item > div{
     display: inline-block;
-    /*background-color: yellow;*/
+    background-color: yellow;
     font-size: 14px;
     text-align: center;
 }

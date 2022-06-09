@@ -6,7 +6,8 @@
 	SELECT BNO AS "bno",
 	       TITLE AS "title", 
 	       CONTENT AS "content",
-	       WRITER AS "writer"
+	       WRITER AS "writer",
+	       REG_DATE AS 'reg_date'
 	  FROM BOARD 
 	 WHERE (TITLE LIKE CONCAT('%', #{searchTxt}, '%')
 	    OR CONTENT LIKE CONCAT('%', #{searchTxt}, '%'))
@@ -23,9 +24,8 @@
 	
 	<update id="update" parameterType="map">
 		UPDATE BOARD 
-		SET TITLE= #{title}, 
-		CONTENT=#{content},
-		REG_DATE = now()
+		SET TITLE=#{title}, 
+		CONTENT=#{content}
 		WHERE bno =#{bno}
 	</update>
 	

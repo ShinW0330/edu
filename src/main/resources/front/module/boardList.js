@@ -41,7 +41,7 @@ function writeBoardList(result) {
 		html += '<div class="item">' +
 			'<div class="num">' + item.bno + '</div>' +
 			'<div class="title"> <a href="#">' + item.title + '</a> </div>' +
-			'<div class="date"></div>' +
+			'<div class="date">'+ item.reg_date +'</div>' +
 			'<div class="writer">' + item.writer + '</div>' +
 			'<div class="cnt">0</div>' +
 			'</div>';
