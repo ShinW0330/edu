@@ -18,7 +18,7 @@
       <div class="title">
         <dl>
           <dt>제목</dt>
-          <dd><input type="text" placeholder="제목입력" value="#"></dd>
+          <dd><input type="text" id-="editTitle" placeholder="제목입력" value="#"></dd>
         </dl>
       </div>
       <div class="info">
@@ -34,14 +34,17 @@
         -->
       </div>
       <div class="cont">
-        <textarea id=editContent placeholder="내용입력"></textarea>
+        <textarea id=editContText placeholder="내용입력"></textarea>
       </div>
     </div> <!--End board_write-->
 
     <div class="bt_wrap">
-      
+       <button type="button" id="editBtn" > 수정 </button>
+       <button type="button" id="editCancelBtn" onclick="location.href='list.html'"> 취소</button>
+      <!-- 
       <a href="view.html" class="on">수정</a>
       <a href="view.html" >취소</a>
+       -->
     </div> <!--End bt_wrap -->
   </div> <!--End board_list_wrap -->
 </div> <!--End board_wrap -->

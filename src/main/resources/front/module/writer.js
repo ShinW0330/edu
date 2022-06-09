@@ -7,7 +7,7 @@ function submitButtonChk(){
     console.log("찍힘")
     /*1 .title , content 연결\
     *2. value 값 할당 */
-    debugger
+    //debugger
     let inputTitleTxt = document.getElementById('inputTitle');
     // let inputWriterTxt = document.getElementById('inputWriter');
 

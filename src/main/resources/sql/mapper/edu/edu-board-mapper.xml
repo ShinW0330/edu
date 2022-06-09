@@ -12,22 +12,37 @@
 	 WHERE (TITLE LIKE CONCAT('%', #{searchTxt}, '%')
 	    OR CONTENT LIKE CONCAT('%', #{searchTxt}, '%'))
 	    AND WRITER LIKE CONCAT('%', #{searchWrite}, '%')
-	    
-	    
+	  
 	</select>
 	
+	<select id="editfind" resultType="map" parameterType="map">  
+	SELECT TITLE AS "title", 
+	       CONTENT AS "content",
+	       WRITER AS "writer",
+	  FROM BOARD 
+	 WHERE BNO =#{bno}
+	  
+	</select>
+	
+
 	<insert id="create" parameterType="map">
 		INSERT INTO BOARD ( TITLE, CONTENT, WRITER, REG_DATE) 
 		VALUES (#{title}, #{content},'관리자', now()) 
-	
 	</insert>
 	
 	<update id="update" parameterType="map">
 		UPDATE BOARD 
-		SET TITLE=#{title}, 
-		CONTENT=#{content}
-		WHERE bno =#{bno}
+			SET TITLE=	#{title}, 
+				CONTENT=#{content}
+			WHERE BNO =#{bno}
 	</update>
+	
+	<delete id="delete" parameterType='map'>
+		DELETE
+			FROM BOARD
+			WHERE BNO =#{bno}
+	</delete>
+	
 	
 	<!-- insert query 
 	<insert id="putSample" parameterType="map">

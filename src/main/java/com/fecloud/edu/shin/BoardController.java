@@ -33,11 +33,26 @@ public class BoardController {
 		return ResponseEntity.ok(service.create(param));
 	}
 	
+	
+	@GetMapping("/editfind")
+	public ResponseEntity<?> editfind(@RequestParam Map<String, Object> param ){
+		
+		return ResponseEntity.ok(service.editfind(param));
+	}
+	
 	// 게시판 수정 
 	@GetMapping("/getUpdate")
-	public ResponseEntity<?> getUpdate (@RequestParam Map<String, Object> param){
+	public ResponseEntity<?> getUpdate (@RequestBody Map<String, Object> param){
 		return ResponseEntity.ok(service.getUpdate(param));
 		
 	}
+	
+	@PostMapping("/delete")
+public ResponseEntity<?> delete(@RequestBody Map<String, Object> param ){
+		
+		return ResponseEntity.ok(service.delete(param));
+	}
+	
+	
 }
 

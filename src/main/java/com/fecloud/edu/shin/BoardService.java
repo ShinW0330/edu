@@ -19,7 +19,10 @@ public class BoardService {
 		
 		return mapper.findAll(param); 
 	}
-
+	
+	public List<Map> editfind(Map<String, Object> param) {
+		return mapper.editfind(param); 
+	}
 
 	public int create(Map<String, Object> param) {
 		
@@ -27,9 +30,16 @@ public class BoardService {
 	}
 
 
-	public List<Map> getUpdate(Map<String, Object> param) {
+	public int getUpdate(Map<String, Object> param) {
 		return mapper.getUpdate(param);
 	}
+	
+	public int delete(Map<String, Object> param) {
+		return mapper.delete(param);
+	}
+
+
+	
 
 
 
