@@ -8,7 +8,7 @@ function submitEditChk(){
 	
 	let txtAreaEdit = document.getElementById('editContText');
 	let txtAreaEditValue = txtAreaEdit.value;
-
+debugger
 	let titleEdit = document.getElementById('editTitle').value;
 
 	let param = { title: titleEdit, content: txtAreaEditValue };
@@ -16,7 +16,7 @@ function submitEditChk(){
 	param.title = titleEdit;
 	param.content = txtAreaEditValue;
 
-	let fetchHostSumitEdit = 'http://localhost:8080/board/create'
+	let fetchHostSumitEdit = 'http://localhost:8080/board/getUpdate'
 
 	fetch(fetchHostSumitEdit, {
 		method: 'post', headers: {
